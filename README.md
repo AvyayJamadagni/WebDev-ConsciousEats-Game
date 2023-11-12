@@ -1,12 +1,5 @@
 # Computing 2 Coursework Submission.
-**CID**: 02055596
-
-NOTE FOR FEEDBACK:
-Hello! I have only finished the functions in the game module file and the JSDoc for it.
-Can you please give me feedback on whether the functions are pure or not and how I can 
-make the code more efficient? Thanks in advance!
-
-This is the submission template for your Computing 2 Applications coursework submission.
+**CID**: 
 
 ## Checklist
 ### Install dependencies locally
