@@ -1,0 +1,2869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>ConsciousEats - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="ConsciousEats.html">ConsciousEats</a><ul class='methods'><li data-type='method'><a href="ConsciousEats.html#.add_token_to_current_position">add_token_to_current_position</a></li><li data-type='method'><a href="ConsciousEats.html#.eating_sustainably">eating_sustainably</a></li><li data-type='method'><a href="ConsciousEats.html#.give_badges">give_badges</a></li><li data-type='method'><a href="ConsciousEats.html#.lowest_value_doubled_powerup">lowest_value_doubled_powerup</a></li><li data-type='method'><a href="ConsciousEats.html#.move_token_on_path">move_token_on_path</a></li><li data-type='method'><a href="ConsciousEats.html#.negative_to_positive_powerup">negative_to_positive_powerup</a></li><li data-type='method'><a href="ConsciousEats.html#.remove_token_from_previous_position">remove_token_from_previous_position</a></li><li data-type='method'><a href="ConsciousEats.html#.score_updater">score_updater</a></li><li data-type='method'><a href="ConsciousEats.html#.should_give_more_sustainable_options">should_give_more_sustainable_options</a></li><li data-type='method'><a href="ConsciousEats.html#.winner">winner</a></li></ul></li><li><a href="Stats4.html">Stats4</a><ul class='methods'><li data-type='method'><a href="Stats4.html#.get_statistics">get_statistics</a></li><li data-type='method'><a href="Stats4.html#.record_game">record_game</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">ConsciousEats</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        ConsciousEats
+        </h2>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line3">line 3</a>
+    </li></ul></dd>
+    
+
+    
+    <dt class="tag-version">Version:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>2021/22</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>Avyay Jamadagni</li>
+        </ul>
+    </dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+            
+                <div class="description usertext"><p>ConsciousEats.js is a module to create a game where 2 players develop
+sustainable eating habits.
+INSTRUCTIONS:
+Players choose dishes for each meal and move around the board based on
+the sustainability rating of the dish they chose. Each dish has tags
+associated with them, and if they collect 5 tags of the same kind, they
+earn a badge. If the damages of their selected dishes decrease with every
+meal, that is, they are eating sustainably, they earn a powerup which is
+immediately applied. The game ends when one of the players reach the end.
+The sustainability score is added to the number badges they have, and the
+winner is then decided.</p></div>
+            
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".add_token_to_current_position"><span class="type-signature">(static) </span>add_token_to_current_position<span class="signature">(player, currentPosition, path)</span><span class="type-signature"> &rarr; {ConsciousEats.path}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line196">line 196</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>This function adds the token to the current position</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>player</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ConsciousEats.player</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>player to be moved</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>currentPosition</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ConsciousEats.nextPosition</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>sum of player's
+sustainabilty score including the latest score</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ConsciousEats.path</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the latest version of the path is used</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>returns the updated path with player token</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">ConsciousEats.path</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".eating_sustainably"><span class="type-signature">(static) </span>eating_sustainably<span class="signature">(player)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line270">line 270</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>As the players move across the path, they must be monitered whether they
+are actually eating sustainably or not. This can be calculated by measuring
+change in the damages over turns.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>player</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ConsciousEats.player</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>player to check</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>returns true if the player is eating sustainably</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".give_badges"><span class="type-signature">(static) </span>give_badges<span class="signature">(player)</span><span class="type-signature"> &rarr; {ConsciousEats.player}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line397">line 397</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>As the player continues to choose meals, they collect tags associated
+with the meals. When the player has 5 tags of the same type, they earn
+a badge. These badges contribute to their final score when the game ends.
+The following function appends the badges earned by the player to their
+badges key.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>player</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ConsciousEats.player</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>player to be given badges</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>an updated player is returned</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">ConsciousEats.player</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".lowest_value_doubled_powerup"><span class="type-signature">(static) </span>lowest_value_doubled_powerup<span class="signature">(player)</span><span class="type-signature"> &rarr; {ConsciousEats.player}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line326">line 326</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>A second possible powerup is for players who do have not eating a dish
+with a negative sustainability score. This function should take the lowest
+scoring dish and double it.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>player</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ConsciousEats.player</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>player to receive powerup</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>returns the updated player score</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">ConsciousEats.player</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".move_token_on_path"><span class="type-signature">(static) </span>move_token_on_path<span class="signature">(player, path)</span><span class="type-signature"> &rarr; {ConsciousEats.path}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line228">line 228</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>The token must be moved based on the player's sustainability scores. Hence
+this function transports the player to a new position on the path, and
+checks if the players are on the same spot, in which case, they will need
+to interact with each other.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>player</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ConsciousEats.player</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>player to be moved</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ConsciousEats.path</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>path to be updated</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>returns the updated path with new positions</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">ConsciousEats.path</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".negative_to_positive_powerup"><span class="type-signature">(static) </span>negative_to_positive_powerup<span class="signature">(player)</span><span class="type-signature"> &rarr; {ConsciousEats.player}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line293">line 293</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>If a player consistently eats more sustainably, then the player should
+be rewarded by a power up that enables them to convert all their
+negative scores to positive ones.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>player</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ConsciousEats.player</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>player to receive powerup</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>returns the player with changed
+sustainability scores.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">ConsciousEats.player</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".remove_token_from_previous_position"><span class="type-signature">(static) </span>remove_token_from_previous_position<span class="signature">(player, previousPosition, path)</span><span class="type-signature"> &rarr; {ConsciousEats.path}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line173">line 173</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>This function removes the token from its previous position.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>player</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ConsciousEats.player</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>player to be moved</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>previousPosition</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ConsciousEats.currentPosition</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>sum of player's
+sustainability scores without the latest score.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ConsciousEats.path</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the latest version of the path is used</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>returns the updated path without player token</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">ConsciousEats.path</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".score_updater"><span class="type-signature">(static) </span>score_updater<span class="signature">(meal, dish, player)</span><span class="type-signature"> &rarr; {ConsciousEats.player}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line136">line 136</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>The scores of each player must be updated after the choose a dish.
+This function updates the scores of each player using data from the
+meal.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>meal</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ConsciousEats.meal</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>taken from a database of meals objects</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dish</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ConsciousEats.dish</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>taken from meal objects in the database</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>player</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ConsciousEats.player</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>player to be updated</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>returns the player's scores with updated
+information</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">ConsciousEats.player</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".should_give_more_sustainable_options"><span class="type-signature">(static) </span>should_give_more_sustainable_options<span class="signature">(player1, player2)</span><span class="type-signature"> &rarr; {player1|player2}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line362">line 362</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>When the players move, it is possible that one moves ahead of the other,
+although it was previously behind that other player. In such a case, the
+other player must be motivated to catch up to the other player, so the
+suggested dishes must vary. Hence, this function will determine who to give
+sustainable options to.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>player1</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ConsciousEats.html#.player1">ConsciousEats.player1</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the first player to be compared with</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>player2</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ConsciousEats.html#.player2">ConsciousEats.player2</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the second player to be compared with</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>who sustainable options should be given to</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">player1</span>
+|
+
+<span class="param-type">player2</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".winner"><span class="type-signature">(static) </span>winner<span class="signature">(player1, player2)</span><span class="type-signature"> &rarr; {player1|player2|tie}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line443">line 443</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Finally, the winner must be decided based on who reaches the finishing
+position first and the players' badges. Each badge counts for 3 points,
+so the score from their badges is added to their sustainability score,
+and whoever has the highest sustainability score wins!</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>player1</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ConsciousEats.html#.player1">ConsciousEats.player1</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>first player to be checked</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>player2</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ConsciousEats.html#.player2">ConsciousEats.player2</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>second player to be checked</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>who has won or if it was a tie</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">player1</span>
+|
+
+<span class="param-type">player2</span>
+|
+
+<span class="param-type">tie</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        
+                
+<h4 class="name" id=".61">61</h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line45">line 45</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>An empty path of empty arrays has been created for numbers from 0 to 60.
+Each column will have 6 positions. This will be formated using HTML.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Array</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ConsciousEats.emptyPath = R.repeat([], 61);</code></pre>
+
+
+
+            
+                
+<h4 class="name" id=".Path">Path</h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>The path that the players follow will be present on a board. It will be
+created using a 2D array, consisting of empty arrays representing 0 to 60.
+Tokens representing each player will move along the path depending on their
+sustainability score.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Array.&lt;Array.&lt;<a href="ConsciousEats.html#.token_or_array_index">ConsciousEats.token_or_array_index</a>>></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id=".player1">player1</h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line57">line 57</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>player1.token</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>string &quot;p1&quot;</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>player1.sustainabilityScore</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>starts with [0]</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>player1.environmentalDamagesScore</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>starts with [0]</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>player1.humanHealthDamagesScore</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>starts with [0]</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>player1.resourceScarcityScore</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>starts with [0]</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>player1.tags</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>starts with []</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>player1.badges</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>starts []</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<div class="description usertext">
+    <p>Player 1 will be an object containing various parameters that will be
+changed throughout the game</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ConsciousEats.player1 = {
+    "token": "p1",
+    "sustainabilityScore": [0],
+    "environmentalDamagesScore": [0],
+    "humanHealthDamagesScore": [0],
+    "resourceScarcityScore": [0],
+    "tags": [],
+    "badges" : []
+};</code></pre>
+
+
+
+            
+                
+<h4 class="name" id=".player2">player2</h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line90">line 90</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>player2.token</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>string &quot;p2&quot;</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>player2.sustainabilityScore</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>starts with [0]</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>player2.environmentalDamagesScore</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>starts with [0]</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>player2.humanHealthDamagesScore</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>starts with [0]</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>player2.resourceScarcityScore</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>starts with [0]</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>player2.tags</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>starts with []</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>player2.badges</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>starts []</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<div class="description usertext">
+    <p>Player 2 will be an object containing various parameters that will be
+changed throughout the game</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ConsciousEats.player2 = {
+    "token": "p2",
+    "sustainabilityScore": [0],
+    "environmentalDamagesScore": [0],
+    "humanHealthDamagesScore": [0],
+    "resourceScarcityScore": [0],
+    "tags": [],
+    "badges" : []
+};</code></pre>
+
+
+
+            
+                
+<h4 class="name" id=".token">token</h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line30">line 30</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Tokens will be disks that will move along the path on the board based
+on the players' sustainability scores. For the game module, strings as
+described below will be used instead.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">"p1"</span>
+|
+
+<span class="param-type">"p2"</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id=".token_or_array_index">token_or_array_index</h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="common_ConsciousEats.js.html">common/ConsciousEats.js</a>, <a href="common_ConsciousEats.js.html#line38">line 38</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Tokens will be placed on the path in empty arrays. The index of the array
+containing the token will indicate the location of each player on the board.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="ConsciousEats.html#.token">ConsciousEats.token</a></span>
+|
+
+<span class="param-type">array_index</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+            
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Tue Jul 05 2022 11:58:15 GMT+0100 (British Summer Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "computing-2-submission": "file:../.."
+  }
+}

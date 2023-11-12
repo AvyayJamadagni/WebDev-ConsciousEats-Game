@@ -1,0 +1,285 @@
+:root
+{
+    --banner-height: 15%;
+    --banner-font-size: 70px;
+    --grid_border_width: 0px;
+    --border-width: 2px;
+    --sidebar-width: 20%;
+    --footer-height: 20%;
+    --grid-columns: 10;
+    --grid-rows: 6;
+    --grid-aspect: var(--grid-columns) / var(--grid-rows);
+    --informationbar-height: 30px;
+
+
+    --banner-background: #83e68e;
+    --banner-colour: #233e26;
+    --border-colour: white;
+    --sidebar-background: #83e68e;
+    --sidebar-colour: white;
+    --main-background: white;
+
+    font-family: "Tahoma", "Arial", sans-serif;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+main
+{
+    background: var(--main-background);
+    height: calc(100% - var(--banner-height) - var(--footer-height));
+    left: var(--sidebar-width);
+    overflow-y: hidden;
+    position: absolute;
+    top: var(--banner-height);
+    width: calc(100% - 2 * var(--sidebar-width));
+}
+
+#title
+{
+    color: var(--banner-colour);
+    font-family: "Trebuchet MS";
+    font-size: var(--banner-font-size);
+    margin: auto;
+    position: relative;
+    text-align: left;
+    left: 1%;
+}
+
+header
+{
+    background: var(--banner-background);
+    border-bottom: var(--border-width) solid var(--border-colour);
+    height: var(--banner-height);
+    position: absolute;
+    width: 100%;
+}
+
+header a
+{
+    color: var(--sidebar-colour);
+    position: absolute;
+    margin: 1%;
+    text-align: right;
+    right: 1%;
+    top: 1em;
+}
+
+aside
+{
+    background: var(--sidebar-background);
+    color: var(--sidebar-colour);
+    height: calc(100% - var(--banner-height) - var(--footer-height));
+    position: absolute;
+    text-align: center;
+    top: var(--banner-height);
+    width: var(--sidebar-width);
+    border-bottom: var(--border-width) solid var(--border-colour);
+}
+
+.sidebar .player
+{
+    margin-bottom: 3ex;
+}
+
+.sidebar .game_info
+{
+    margin-bottom: 3ex;
+}
+
+#player1
+{
+    border-right: var(--border-width) solid var(--border-colour);
+    left: 0;
+}
+
+#player2
+{
+    border-left: var(--border-width) solid var(--border-colour);
+    right: 0;
+}
+
+#player1_name,
+#player2_name
+{
+    background: inherit;
+    border: none;
+    color: inherit;
+    font: inherit;
+    font-size: 16pt;
+    font-weight: bold;
+    text-align: inherit;
+    width: 100%;
+}
+
+footer
+{
+    bottom: 0px;
+    height: calc(var(--footer-height) - var(--informationbar-height));
+    position: absolute;
+    width: 50%;
+    background-color: green
+}
+
+#player1_cards
+{
+    position: absolute;
+    border-top: var(--border-width) solid var(--border-colour);
+    background-color: rgb(13, 104, 56);
+}
+
+#player2_cards
+{
+    position: absolute;
+    left: 50%;
+    border-left: var(--border-width) solid var(--border-colour);
+    border-top: var(--border-width) solid var(--border-colour);
+    background-color: rgb(215, 229, 45);
+}
+
+.grid
+{
+    aspect-ratio: var(--grid-aspect);
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    position: relative;
+    max-height: 100%;
+    max-width: 100%;
+    border: var(--grid_border_width) solid rgb(255, 255, 255);
+    background-image: url("assets/CE\ path_final.png");
+    background-size: 100% 100%;
+}
+
+.row
+{
+    height: calc(100% / var(--grid-rows));
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: var(--grid_border_width) solid rgb(255, 255, 255);
+}
+
+.cell
+{
+    background-size: cover;
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: calc(1*(100% / (var(--grid-columns))));
+    border: var(--grid_border_width) solid rgb(255, 255, 255);
+}
+
+#information_bar
+{
+    height: var(--informationbar-height);
+    width: 100%;
+    top: calc(100% - var(--footer-height));
+    text-align: center;
+    border-top: var(--border-width) solid var(--border-colour);
+    color: yellow;
+}
+
+#card_row1
+#card_row2
+{
+    height: 100%;
+    position: relative;
+    padding: 0;
+    margin-left: 0;
+    width: 100%;
+}
+
+.card
+{
+    background-size: cover;
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: calc(100% / 3);
+    border: calc(var(--border-width)/2) solid white;
+}
+
+.card_grid1
+.card_grid2
+{
+    height: 100%;
+    position: relative;
+    padding: 0;
+    margin-left: 0;
+    width: 100%;
+}
+
+#card_name
+{
+    color: white;
+    text-align: center;
+    font-size: medium;
+    top: 0;
+    margin-top: calc(0.5 * var(--footer-height));
+}
+
+#card_rating
+{
+    color: white;
+    text-align: center;
+    font-size: small;
+    font-style: italic;
+    position: relative;
+    margin-bottom: var(--footer-height);
+}
+
+.cell.p1token
+{
+    background-image: url("assets/p1_token.png");
+    background-size: 100% 100%;
+}
+
+.cell.p2token
+{
+    background-image: url("assets/p2_token.png");
+    background-size: 100% 100%;
+}
+
+.cell.p1andp2token
+{
+    background-image: url("assets/p1_and_p2_token.png");
+    background-size: 100% 50%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+#badge_name
+{
+    color: rgb(13, 104, 56);
+}
+
+#powerup_name
+{
+    color: yellow;
+    font-weight: bold;
+}
+
+
+.card:hover
+{
+    filter: brightness(50%);
+}
